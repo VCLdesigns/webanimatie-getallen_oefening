@@ -10,8 +10,14 @@
 </head>
 
 <body>
-    <h1>Getallen</h1>
+    <div id="container">
+        <h1>Getallen</h1>
 
+        <div id="de_knop"> De Knop</div>
+        <p id="tekst_veld">Wij leren hier over variabelen in strings. Ons doel: Als we op de blok klikken willen we dat
+            de tekst telkens 0.2em groter
+            wordt.</p>
+    </div>
     <script>
         var getal1 = 10;
         var getal2 = 20;
@@ -61,9 +67,9 @@
         var poging4 = 37;
 
         //extra methode 1
-        console.log(Math.max(poging1, poging2,poging3, poging4));
-      
-        
+        console.log(Math.max(poging1, poging2, poging3, poging4));
+
+
 
         //oefening5b
         console.log(Math.abs(-6));
@@ -72,10 +78,46 @@
         //willekeurig getal
         var max_waarde = 400;
         var min_waarde = 100;
-        console.log(min_waarde + Math.random())
+        console.log(min_waarde + Math.random());
         console.log(Math.random() * (max_waarde - min_waarde));
         var willekeurig = min_waarde + Math.random() * (max_waarde - min_waarde);
-        console.log(willekeurig);
+        console.log(Math.round(willekeurig));
+
+        //variabelen in strings
+        var de_knop = document.querySelector("#de_knop");
+        var tekst_veld = document.querySelector("#tekst_veld");
+        var font_size = 1.5;
+
+        de_knop.addEventListener("click", het_doel);
+        function het_doel(evt) {
+            //vergroot de font-size in #tekst_veld met 0.2em
+            font_size += 0.2;
+            console.log(font_size);
+            tekst_veld.style.fontSize = font_size + "em";
+        
+        }
+        //extra
+        
+        de_knop.addEventListener("mouseover", beweeg);
+        function beweeg(evt){var beweegX = 0 + Math.random() * (500 - 0);
+        var beweegY = 0 + Math.random() * (500 - 0);
+            de_knop.style.transform = "translate(" + beweegX + "px ," + beweegY +"px)";
+        }
+        
+        
+        
+
+        de_knop.addEventListener("mouseout", extra_doel);
+        function extra_doel(evt) {
+            var rgb_red= 0 + Math.random() * (255 - 0);
+        var rgb_blue= 0 + Math.random() * (255 - 0);
+        var rgb_green= 0 + Math.random() * (255 - 0);
+        var alpha_willekeurig = 0 + Math.random() * (1 - 0);
+            //verander de color van#tekst_veld
+            de_knop.style.color = "rgba(" + rgb_red + " ," + rgb_green + " ," + rgb_blue + " ," + alpha_willekeurig + ")";
+        }
+
+
     </script>
 </body>
 

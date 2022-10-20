@@ -13,7 +13,27 @@ body{
     font-size: 1.5em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+#container{
+width: 750px;
+margin: 0 auto;
+}
 h1{
     padding: 50px;
-    border-bottom: #201d13 solid 1px;
+    border-bottom: var(--zwart) solid 1px;
+    text-align: center;
+}
+#de_knop{
+    width: 200px;
+    height: 200px;
+    background-color: rgba(157, 41, 51, 1);
+    margin: 100px auto;
+    font-size: 3em;
+    text-align: center;
+    transform: translate();
+
+}
+#tekst_veld{
+padding: 50px;
+border: #9d2933 outset 2px;
+outline: #9d2933 inset 2px;
 }
