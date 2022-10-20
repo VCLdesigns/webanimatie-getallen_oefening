@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Getallen Oefening</title>
+</head>
+
+<body>
+    <h1>Getallen</h1>
+
+    <script>
+        var getal1 = 10;
+        var getal2 = 20;
+        var optelsom = getal1 + getal2;
+
+        console.log(getal1);
+        console.log(optelsom);
+        console.log(getal1 + getal2);
+
+        console.log(getal1 - getal2);
+        console.log(getal1 / 2.3);
+        console.log(getal2 * 10);
+
+        console.log(getal1 - 5 * 5);
+        console.log((getal1 - 5) * 5);
+
+        var speciaal = (getal1 - 5) * (getal2 + 1);
+        console.log(speciaal);
+
+        //hier pas je de waarde aan van getal1
+        getal1 = getal1 + 1;
+        console.log(getal1 + ": nieuwe waarde");
+        //nieuwe aanpassing van getal1
+        getal1++;
+        console.log(getal1 + ": nieuwe waarde");
+        console.log(getal1++);
+        //opnieuw aangepaste waarde
+        getal1 += 5;
+        console.log(getal1 + ": nieuwe waarde");
+
+
+        //in de console kan je in math gaan bladeren voor functies (of google het...)
+        console.log(Math);
+        console.log(Math.PI);
+
+        //formule oppervlakte cirkel: straal * straal * PI
+        var straal = 15;
+        var oppervlakte = straal * straal * Math.PI;
+        console.log(oppervlakte);
+        var oppervlakte_anders = Math.pow(straal, 2) * Math.PI;
+        console.log(oppervlakte_anders);
+
+        //oefening5a
+        var poging1 = 50;
+        var poging2 = 48;
+        var poging3 = 43;
+        var poging4 = 37;
+
+        //extra methode 1
+        console.log(Math.max(poging1, poging2,poging3, poging4));
+      
+        
+
+        //oefening5b
+        console.log(Math.abs(-6));
+
+
+        //willekeurig getal
+        var max_waarde = 400;
+        var min_waarde = 100;
+        console.log(min_waarde + Math.random())
+        console.log(Math.random() * (max_waarde - min_waarde));
+        var willekeurig = min_waarde + Math.random() * (max_waarde - min_waarde);
+        console.log(willekeurig);
+    </script>
+</body>
+
+</html>
